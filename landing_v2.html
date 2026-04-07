@@ -1,0 +1,2192 @@
+<!--
+  ALTERNATIVE VERSION: Конверсионно-оптимизированный лендинг
+  Primary difference from original: добавлены блоки problem agitation, social proof, FAQ,
+  переработана CTA-архитектура, outcome-focused messaging
+  Predicted effect: увеличение конверсии в заявку за счёт работы с возражениями и social proof
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магистратура «Архитектура цифровой трансформации» — Контур Университет</title>
+  <meta name="description" content="Магистерская программа 38.04.05 «Бизнес-информатика». Станьте лидером цифровых изменений за 2 года. Преподают практики из СКБ Контур, Ланит, Gartner. Старт — сентябрь 2026.">
+  <meta property="og:title" content="Магистратура «Архитектура цифровой трансформации» — Контур Университет">
+  <meta property="og:description" content="Станьте лидером цифровых изменений за 2 года. Диплом магистра 38.04.05. Преподают практики из СКБ Контур, Ланит, Gartner.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://konturuniversity.ru/education/master/">
+  <meta property="og:image" content="https://placehold.co/1200x630/0693e3/ffffff?text=Контур+Университет">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      color: #313131;
+      background: #ffffff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: #0693e3;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #9b51e0;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1 {
+      font-size: 2.625rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: #000000;
+    }
+
+    h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: #000000;
+    }
+
+    h3 {
+      font-size: 1.375rem;
+      font-weight: 600;
+      line-height: 1.3;
+      color: #000000;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #313131;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section--gray {
+      background: #f8f9fa;
+    }
+
+    .section--dark {
+      background: #1a1a2e;
+      color: #ffffff;
+    }
+
+    .section--dark h2,
+    .section--dark h3,
+    .section--dark p {
+      color: #ffffff;
+    }
+
+    .section__label {
+      display: inline-block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #0693e3;
+      margin-bottom: 0.75rem;
+    }
+
+    .section__title {
+      margin-bottom: 1rem;
+    }
+
+    .section__subtitle {
+      font-size: 1.125rem;
+      color: #666;
+      max-width: 640px;
+      margin-bottom: 3rem;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      border-radius: 9999px;
+      font-size: 1.125em;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+
+    .btn--primary {
+      background: #32373c;
+      color: #ffffff;
+    }
+
+    .btn--primary:hover {
+      background: #000000;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    .btn--secondary {
+      background: transparent;
+      color: #32373c;
+      border: 2px solid #32373c;
+    }
+
+    .btn--secondary:hover {
+      background: #32373c;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .btn--gradient {
+      background: linear-gradient(135deg, #0693e3, #9b51e0);
+      color: #ffffff;
+    }
+
+    .btn--gradient:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(155, 81, 224, 0.3);
+      color: #ffffff;
+    }
+
+    .btn--white {
+      background: #ffffff;
+      color: #32373c;
+    }
+
+    .btn--white:hover {
+      background: #f0f0f0;
+      color: #000000;
+      transform: translateY(-1px);
+    }
+
+    /* ===== CARDS ===== */
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.06);
+    }
+
+    .card__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      background: linear-gradient(135deg, rgba(6,147,227,0.1), rgba(155,81,224,0.1));
+      color: #0693e3;
+    }
+
+    .card__icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .card__title {
+      margin-bottom: 0.5rem;
+    }
+
+    .card__text {
+      font-size: 0.9375rem;
+      color: #666;
+    }
+
+    /* ===== GRID ===== */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    /* ===== STICKY NAV ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: box-shadow 0.3s;
+      padding: 0.875rem 0;
+    }
+
+    .nav--scrolled {
+      box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+    }
+
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav__logo {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #000000;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav__logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #0693e3, #9b51e0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.875rem;
+    }
+
+    .nav__cta {
+      padding: 0.625rem 1.5rem;
+      font-size: 0.9375rem;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 8rem 0 5rem;
+      background: #ffffff;
+    }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, rgba(6,147,227,0.08), rgba(155,81,224,0.08));
+      color: #0693e3;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      max-width: 700px;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero__subtitle {
+      font-size: 1.25rem;
+      color: #666;
+      max-width: 600px;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .hero__ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero__social-proof {
+      font-size: 0.875rem;
+      color: #abb8c3;
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+
+    .hero__social-proof svg {
+      width: 16px;
+      height: 16px;
+      color: #00d084;
+      flex-shrink: 0;
+    }
+
+    .hero__params {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .hero__param {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero__param-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #000000;
+    }
+
+    .hero__param-label {
+      font-size: 0.8125rem;
+      color: #abb8c3;
+      margin-top: 0.125rem;
+    }
+
+    /* ===== PROBLEM AGITATION ===== */
+    .problem {
+      padding: 5rem 0;
+      background: #f8f9fa;
+    }
+
+    .problem__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .problem__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border-left: 3px solid transparent;
+      border-image: linear-gradient(180deg, #0693e3, #9b51e0) 1;
+    }
+
+    .problem__item-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(155,81,224,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9b51e0;
+    }
+
+    .problem__item-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .problem__item-text {
+      font-size: 1.0625rem;
+      color: #313131;
+      line-height: 1.5;
+    }
+
+    /* ===== SOLUTION ===== */
+    .solution__content {
+      max-width: 780px;
+    }
+
+    .solution__content p {
+      font-size: 1.125rem;
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    .solution__highlight {
+      display: inline;
+      background: linear-gradient(135deg, rgba(6,147,227,0.12), rgba(155,81,224,0.12));
+      padding: 0.125em 0.25em;
+      border-radius: 4px;
+    }
+
+    /* ===== SKILLS ===== */
+    .skills__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .skill-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+
+    .skill-card__icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(6,147,227,0.1), rgba(155,81,224,0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0693e3;
+    }
+
+    .skill-card__icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .skill-card__title {
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: #000000;
+      margin-bottom: 0.25rem;
+    }
+
+    .skill-card__text {
+      font-size: 0.9375rem;
+      color: #666;
+    }
+
+    /* ===== AUDIENCE ===== */
+    .audience__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .audience-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .audience-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #0693e3, #9b51e0);
+    }
+
+    .audience-card__icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(6,147,227,0.1), rgba(155,81,224,0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      color: #0693e3;
+    }
+
+    .audience-card__icon svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .audience-card__title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .audience-card__text {
+      font-size: 0.9375rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ===== METHODOLOGY ===== */
+    .method__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      counter-reset: method;
+    }
+
+    .method-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+      position: relative;
+      counter-increment: method;
+    }
+
+    .method-card::before {
+      content: counter(method, decimal-leading-zero);
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #0693e3, #9b51e0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .method-card__title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .method-card__text {
+      font-size: 0.9375rem;
+      color: #666;
+    }
+
+    /* ===== PROGRAM ===== */
+    .program__list {
+      list-style: none;
+    }
+
+    .program__module {
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .program__module:last-child {
+      border-bottom: none;
+    }
+
+    .program__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 0;
+      cursor: pointer;
+      user-select: none;
+      gap: 1rem;
+    }
+
+    .program__header:hover .program__module-title {
+      color: #0693e3;
+    }
+
+    .program__module-num {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: #0693e3;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      min-width: fit-content;
+    }
+
+    .program__module-title {
+      flex: 1;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #000000;
+      transition: color 0.2s;
+    }
+
+    .program__toggle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform 0.3s, background 0.2s;
+    }
+
+    .program__toggle svg {
+      width: 16px;
+      height: 16px;
+      color: #313131;
+    }
+
+    .program__module.active .program__toggle {
+      transform: rotate(180deg);
+      background: linear-gradient(135deg, #0693e3, #9b51e0);
+    }
+
+    .program__module.active .program__toggle svg {
+      color: #ffffff;
+    }
+
+    .program__body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+
+    .program__body-inner {
+      padding: 0 0 1.5rem 0;
+    }
+
+    .program__subjects {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .program__subject {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      background: #f8f9fa;
+      padding: 0.375rem 0.875rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      color: #313131;
+    }
+
+    .program__subject svg {
+      width: 14px;
+      height: 14px;
+      color: #0693e3;
+    }
+
+    .program__cta {
+      margin-top: 2.5rem;
+      text-align: center;
+    }
+
+    /* ===== TEAM ===== */
+    .team__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .team-card {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+    }
+
+    .team-card__photo {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      background: #f0f0f0;
+    }
+
+    .team-card__info {
+      padding: 1.5rem;
+    }
+
+    .team-card__name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .team-card__role {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #0693e3;
+      margin-bottom: 0.75rem;
+    }
+
+    .team-card__bio {
+      font-size: 0.9375rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ===== REVIEWS ===== */
+    .reviews__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .review-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+      position: relative;
+    }
+
+    .review-card__quote {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.5rem;
+      font-size: 3rem;
+      line-height: 1;
+      background: linear-gradient(135deg, #0693e3, #9b51e0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      opacity: 0.3;
+      font-family: Georgia, serif;
+    }
+
+    .review-card__text {
+      font-size: 1rem;
+      color: #313131;
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 1.25rem;
+    }
+
+    .review-card__author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .review-card__avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0693e3, #9b51e0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .review-card__name {
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: #000000;
+    }
+
+    .review-card__position {
+      font-size: 0.8125rem;
+      color: #abb8c3;
+    }
+
+    .reviews__note {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.875rem;
+      color: #abb8c3;
+      font-style: italic;
+    }
+
+    /* ===== CAREER ===== */
+    .career__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .career-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .career-card__icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(6,147,227,0.1), rgba(155,81,224,0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0693e3;
+    }
+
+    .career-card__icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .career-card__title {
+      font-weight: 600;
+      color: #000000;
+      margin-bottom: 0.25rem;
+    }
+
+    .career-card__text {
+      font-size: 0.875rem;
+      color: #666;
+    }
+
+    /* ===== STEPPER (How to apply) ===== */
+    .stepper {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .stepper__item {
+      display: flex;
+      gap: 1.5rem;
+      position: relative;
+      padding-bottom: 2.5rem;
+    }
+
+    .stepper__item:last-child {
+      padding-bottom: 0;
+    }
+
+    .stepper__marker {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .stepper__dot {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0693e3, #9b51e0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .stepper__line {
+      width: 2px;
+      flex: 1;
+      background: linear-gradient(180deg, #0693e3, #9b51e0);
+      margin-top: 0.5rem;
+      border-radius: 1px;
+      opacity: 0.3;
+    }
+
+    .stepper__item:last-child .stepper__line {
+      display: none;
+    }
+
+    .stepper__content {
+      padding-top: 0.5rem;
+    }
+
+    .stepper__title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 0.375rem;
+    }
+
+    .stepper__text {
+      font-size: 0.9375rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ===== FAQ ===== */
+    .faq__list {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .faq__item {
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .faq__question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 0;
+      cursor: pointer;
+      user-select: none;
+      gap: 1rem;
+    }
+
+    .faq__question-text {
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: #000000;
+      transition: color 0.2s;
+    }
+
+    .faq__question:hover .faq__question-text {
+      color: #0693e3;
+    }
+
+    .faq__icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform 0.3s, background 0.2s;
+    }
+
+    .faq__icon svg {
+      width: 14px;
+      height: 14px;
+      color: #313131;
+    }
+
+    .faq__item.active .faq__icon {
+      transform: rotate(180deg);
+      background: linear-gradient(135deg, #0693e3, #9b51e0);
+    }
+
+    .faq__item.active .faq__icon svg {
+      color: #ffffff;
+    }
+
+    .faq__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+
+    .faq__answer-inner {
+      padding: 0 0 1.25rem 0;
+      font-size: 0.9375rem;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    /* ===== FINAL CTA ===== */
+    .final-cta {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, #0693e3, #9b51e0);
+      color: #ffffff;
+    }
+
+    .final-cta h2 {
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .final-cta__subtitle {
+      text-align: center;
+      color: rgba(255,255,255,0.8);
+      font-size: 1.125rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .final-cta__form {
+      max-width: 520px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .final-cta__input {
+      width: 100%;
+      padding: 0.875rem 1.25rem;
+      border: 2px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      color: #ffffff;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .final-cta__input::placeholder {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .final-cta__input:focus {
+      outline: none;
+      border-color: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.15);
+    }
+
+    .final-cta__submit {
+      width: 100%;
+    }
+
+    .final-cta__note {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #313131;
+      color: rgba(255,255,255,0.7);
+      padding: 3rem 0 2rem;
+    }
+
+    .footer__top {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 2rem;
+    }
+
+    .footer__logo {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer__contact {
+      font-size: 0.9375rem;
+      line-height: 1.8;
+    }
+
+    .footer__contact a {
+      color: rgba(255,255,255,0.8);
+    }
+
+    .footer__contact a:hover {
+      color: #ffffff;
+    }
+
+    .footer__socials {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .footer__social {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.7);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .footer__social:hover {
+      background: rgba(255,255,255,0.15);
+      color: #ffffff;
+    }
+
+    .footer__social svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .footer__bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .footer__links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer__links a {
+      color: rgba(255,255,255,0.4);
+      font-size: 0.8125rem;
+    }
+
+    .footer__links a:hover {
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .skills__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .audience__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .method__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .team__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .reviews__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .career__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .problem__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer__top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .footer__bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      h1 {
+        font-size: 3.25rem;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .skills__grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+      }
+
+      .method__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .career__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .hero__params {
+        gap: 2.5rem;
+      }
+
+      .hero__param-value {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== STICKY NAV ===== -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Главная навигация">
+    <div class="container">
+      <a href="#" class="nav__logo" aria-label="Контур Университет — на главную">
+        <span class="nav__logo-mark">КУ</span>
+        Контур Университет
+      </a>
+      <a href="#apply-form" class="btn btn--primary nav__cta" aria-label="Получить консультацию по программе">
+        Получить консультацию
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero__badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        Магистратура 38.04.05 &laquo;Бизнес-информатика&raquo;
+      </div>
+      <h1>Станьте лидером цифровых изменений за 2 года</h1>
+      <p class="hero__subtitle">Магистерская программа для ИТ-специалистов и управленцев, которые хотят возглавить цифровую трансформацию. Диплом государственного образца.</p>
+
+      <div class="hero__ctas">
+        <a href="#apply-form" class="btn btn--gradient" aria-label="Получить консультацию по программе">Получить консультацию</a>
+        <a href="#program" class="btn btn--secondary" aria-label="Скачать учебный план программы">Скачать учебный план</a>
+      </div>
+
+      <div class="hero__social-proof">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Первый набор — сентябрь 2026 &nbsp;|&nbsp; СКБ Контур — 35+ лет в ИТ
+      </div>
+
+      <div class="hero__params">
+        <div class="hero__param">
+          <span class="hero__param-value">695 000 ₽</span>
+          <span class="hero__param-label">стоимость за год</span>
+        </div>
+        <div class="hero__param">
+          <span class="hero__param-value">2 года</span>
+          <span class="hero__param-label">длительность</span>
+        </div>
+        <div class="hero__param">
+          <span class="hero__param-value">Очная</span>
+          <span class="hero__param-label">онлайн + офлайн</span>
+        </div>
+        <div class="hero__param">
+          <span class="hero__param-value">Диплом</span>
+          <span class="hero__param-label">гос. образца</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROBLEM AGITATION ===== -->
+  <section class="problem section section--gray" id="problem">
+    <div class="container">
+      <span class="section__label">Знакомая ситуация?</span>
+      <h2 class="section__title">Вы переросли свою текущую роль</h2>
+      <div class="problem__grid">
+        <div class="problem__item">
+          <div class="problem__item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <p class="problem__item-text">Вы руководите проектами, но не влияете на стратегию компании. Решения принимаются без вас, хотя вы понимаете технологии лучше топ-менеджмента.</p>
+        </div>
+        <div class="problem__item">
+          <div class="problem__item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <p class="problem__item-text">Вы понимаете технологии, но не умеете выстроить ИТ-архитектуру компании целиком: от стратегии до внедрения и масштабирования.</p>
+        </div>
+        <div class="problem__item">
+          <div class="problem__item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          </div>
+          <p class="problem__item-text">Хотите расти до CDO, CIO или бизнес-архитектора, но не хватает системности: знания разрозненные, нет единой рамки для принятия решений.</p>
+        </div>
+        <div class="problem__item">
+          <div class="problem__item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <p class="problem__item-text">Ваши инициативы по цифровизации буксуют: не хватает навыков управления изменениями, работы с сопротивлением и выстраивания кросс-функциональных процессов.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOLUTION BRIDGE ===== -->
+  <section class="section" id="solution">
+    <div class="container">
+      <span class="section__label">Решение</span>
+      <h2 class="section__title">Программа, которая закрывает этот разрыв</h2>
+      <div class="solution__content">
+        <p><span class="solution__highlight">&laquo;Архитектура цифровой трансформации&raquo;</span> &mdash; магистерская программа, которая учит проектировать и вести цифровые изменения в компаниях: от постановки проблемы до внедрения. Вы освоите работу с процессами, людьми, данными, ИТ-ландшафтом, бюджетами и рисками &mdash; всё, что нужно для управления трансформацией на уровне организации.</p>
+        <p>Программа создана Контур Университетом &mdash; образовательным проектом СКБ Контур, одной из крупнейших ИТ-компаний России с 35-летней историей. Преподают не теоретики, а практики: руководители цифровой трансформации из Ланит, Goodt, Gartner и самого Контура.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ВЫ НАУЧИТЕСЬ ===== -->
+  <section class="section section--gray" id="skills">
+    <div class="container">
+      <span class="section__label">Результат обучения</span>
+      <h2 class="section__title">Вы научитесь</h2>
+      <p class="section__subtitle">7 ключевых навыков, которые вы получите за 2 года программы</p>
+
+      <div class="skills__grid">
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div>
+            <div class="skill-card__title">Системное мышление</div>
+            <p class="skill-card__text">Видеть компанию как систему взаимосвязанных процессов и находить точки максимального воздействия для цифровых изменений.</p>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div>
+            <div class="skill-card__title">ИТ-стратегия</div>
+            <p class="skill-card__text">Разрабатывать ИТ-стратегию, связанную с бизнес-целями компании, и защищать её перед советом директоров.</p>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div>
+            <div class="skill-card__title">Архитектура ИТ-ландшафта</div>
+            <p class="skill-card__text">Проектировать целевую архитектуру информационных систем и управлять переходом от текущего состояния к целевому.</p>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <div class="skill-card__title">Управление изменениями</div>
+            <p class="skill-card__text">Выстраивать работу с сопротивлением, вовлекать стейкхолдеров и создавать культуру непрерывных изменений в организации.</p>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <div>
+            <div class="skill-card__title">Управление портфелем проектов</div>
+            <p class="skill-card__text">Приоритизировать инициативы, распределять бюджеты и ресурсы, контролировать риски портфеля цифровых проектов.</p>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <div>
+            <div class="skill-card__title">Работа с данными</div>
+            <p class="skill-card__text">Принимать управленческие решения на основе данных, выстраивать процессы data governance и аналитическую инфраструктуру.</p>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </div>
+          <div>
+            <div class="skill-card__title">Сквозной проект</div>
+            <p class="skill-card__text">Провести реальный проект цифровой трансформации от диагностики до внедрения &mdash; он станет вашей выпускной квалификационной работой.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ДЛЯ КОГО ===== -->
+  <section class="section" id="audience">
+    <div class="container">
+      <span class="section__label">Для кого</span>
+      <h2 class="section__title">Программа подойдёт вам, если</h2>
+      <p class="section__subtitle">Три типа профессионалов, для которых создана программа</p>
+
+      <div class="audience__grid">
+        <div class="audience-card">
+          <div class="audience-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 class="audience-card__title">ИТ-специалисты</h3>
+          <p class="audience-card__text">Разработчики, аналитики, проджект-менеджеры с 3+ годами опыта. Вы сильны в технологиях, но хотите перейти на управленческий уровень и влиять на стратегию компании, а не только выполнять задачи.</p>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h3 class="audience-card__title">Выпускники бакалавриата</h3>
+          <p class="audience-card__text">Вы окончили бакалавриат по ИТ, экономике или менеджменту и хотите получить магистерскую степень по направлению на стыке бизнеса и технологий с перспективой быстрого карьерного роста.</p>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+          </div>
+          <h3 class="audience-card__title">Управленцы с влиянием</h3>
+          <p class="audience-card__text">Руководители подразделений и предприниматели, которые уже участвуют в цифровой трансформации, но хотят подкрепить опыт системными знаниями и получить формальную квалификацию.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== КАК УСТРОЕНО ОБУЧЕНИЕ ===== -->
+  <section class="section section--gray" id="methodology">
+    <div class="container">
+      <span class="section__label">Методология</span>
+      <h2 class="section__title">Как устроено обучение</h2>
+      <p class="section__subtitle">5 принципов, которые отличают программу от классического образования</p>
+
+      <div class="method__grid">
+        <div class="method-card">
+          <h3 class="method-card__title">Экспертные лекции</h3>
+          <p class="method-card__text">Лекции читают практики из ИТ-индустрии: руководители цифровой трансформации, архитекторы решений, консультанты с опытом в реальных проектах.</p>
+        </div>
+
+        <div class="method-card">
+          <h3 class="method-card__title">Практика и связь с индустрией</h3>
+          <p class="method-card__text">Вы работаете с реальными кейсами и системами. Практические задания основаны на опыте компаний-партнёров &mdash; СКБ Контур, Ланит, Goodt.</p>
+        </div>
+
+        <div class="method-card">
+          <h3 class="method-card__title">Сквозной проект</h3>
+          <p class="method-card__text">С первого семестра вы ведёте проект цифровой трансформации, который развивается вместе с вами и становится вашей выпускной квалификационной работой.</p>
+        </div>
+
+        <div class="method-card">
+          <h3 class="method-card__title">Гибкий формат</h3>
+          <p class="method-card__text">Очная форма с возможностью онлайн-участия. Расписание учитывает, что большинство студентов совмещают учёбу с работой.</p>
+        </div>
+
+        <div class="method-card">
+          <h3 class="method-card__title">Менторство и нетворкинг</h3>
+          <p class="method-card__text">Каждый студент получает персонального ментора из индустрии. Вы становитесь частью сообщества управленцев и ИТ-лидеров.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ПРОГРАММА ОБУЧЕНИЯ ===== -->
+  <section class="section" id="program">
+    <div class="container">
+      <span class="section__label">Программа</span>
+      <h2 class="section__title">Программа обучения</h2>
+      <p class="section__subtitle">6 модулей за 4 семестра &mdash; от основ до реального проекта трансформации</p>
+
+      <ul class="program__list">
+        <li class="program__module">
+          <div class="program__header" role="button" aria-expanded="false" tabindex="0">
+            <span class="program__module-num">Модуль 1</span>
+            <span class="program__module-title">Основы цифровой трансформации</span>
+            <span class="program__toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="program__body">
+            <div class="program__body-inner">
+              <ul class="program__subjects">
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Цифровая трансформация бизнеса
+                </li>
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Системное мышление
+                </li>
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Методология научных исследований
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="program__module">
+          <div class="program__header" role="button" aria-expanded="false" tabindex="0">
+            <span class="program__module-num">Модуль 2</span>
+            <span class="program__module-title">Стратегия и архитектура</span>
+            <span class="program__toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="program__body">
+            <div class="program__body-inner">
+              <ul class="program__subjects">
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  ИТ-стратегия предприятия
+                </li>
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Архитектура информационных систем
+                </li>
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Архитектура решений
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="program__module">
+          <div class="program__header" role="button" aria-expanded="false" tabindex="0">
+            <span class="program__module-num">Модуль 3</span>
+            <span class="program__module-title">Управление и процессы</span>
+            <span class="program__toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="program__body">
+            <div class="program__body-inner">
+              <ul class="program__subjects">
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Управление портфелем проектов
+                </li>
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Управление изменениями
+                </li>
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Бизнес-процессы и оптимизация
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="program__module">
+          <div class="program__header" role="button" aria-expanded="false" tabindex="0">
+            <span class="program__module-num">Модуль 4</span>
+            <span class="program__module-title">Данные и аналитика</span>
+            <span class="program__toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="program__body">
+            <div class="program__body-inner">
+              <ul class="program__subjects">
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Управление данными (Data Governance)
+                </li>
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Бизнес-аналитика и BI
+                </li>
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Принятие решений на основе данных
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="program__module">
+          <div class="program__header" role="button" aria-expanded="false" tabindex="0">
+            <span class="program__module-num">Модуль 5</span>
+            <span class="program__module-title">Экономика и риски</span>
+            <span class="program__toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="program__body">
+            <div class="program__body-inner">
+              <ul class="program__subjects">
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Экономика цифровой трансформации
+                </li>
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Управление рисками
+                </li>
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Бюджетирование ИТ
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="program__module">
+          <div class="program__header" role="button" aria-expanded="false" tabindex="0">
+            <span class="program__module-num">Модуль 6</span>
+            <span class="program__module-title">Сквозной проект и ВКР</span>
+            <span class="program__toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="program__body">
+            <div class="program__body-inner">
+              <ul class="program__subjects">
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Проектный практикум
+                </li>
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Научно-исследовательская работа
+                </li>
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Выпускная квалификационная работа
+                </li>
+                <li class="program__subject">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Преддипломная практика
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="program__cta">
+        <a href="#apply-form" class="btn btn--primary" aria-label="Скачать полный учебный план программы">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Скачать учебный план
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== КОМАНДА ===== -->
+  <section class="section section--gray" id="team">
+    <div class="container">
+      <span class="section__label">Команда</span>
+      <h2 class="section__title">Кто преподаёт</h2>
+      <p class="section__subtitle">Практики из ИТ-индустрии, а не теоретики</p>
+
+      <div class="team__grid">
+        <div class="team-card">
+          <img src="https://placehold.co/400x280/f0f0f0/313131?text=Борис+Славин" alt="Борис Славин — ректор Контур Университета" class="team-card__photo">
+          <div class="team-card__info">
+            <h3 class="team-card__name">Борис Славин</h3>
+            <p class="team-card__role">Ректор Контур Университета</p>
+            <p class="team-card__bio">Доктор экономических наук. Член Экспертного совета Государственной Думы РФ по цифровой экономике. Автор исследований в области цифровой трансформации и управления знаниями.</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <img src="https://placehold.co/400x280/f0f0f0/313131?text=Александр+Кулемин" alt="Александр Кулемин — руководитель программы" class="team-card__photo">
+          <div class="team-card__info">
+            <h3 class="team-card__name">Александр Кулемин</h3>
+            <p class="team-card__role">Руководитель программы</p>
+            <p class="team-card__bio">Директор филиала компании Ланит (Goodt). 18 лет в ИТ-индустрии. Руководил проектами цифровой трансформации для крупнейших российских компаний.</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <img src="https://placehold.co/400x280/f0f0f0/313131?text=Саян+Доржиев" alt="Саян Доржиев — преподаватель программы" class="team-card__photo">
+          <div class="team-card__info">
+            <h3 class="team-card__name">Саян Доржиев</h3>
+            <p class="team-card__role">Преподаватель</p>
+            <p class="team-card__bio">Эксперт в области архитектуры предприятия. Опыт работы в Gartner. Специализируется на ИТ-стратегии, архитектуре решений и управлении технологическим ландшафтом.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ОТЗЫВЫ ===== -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <span class="section__label">Отзывы</span>
+      <h2 class="section__title">Что говорят о программе</h2>
+
+      <div class="reviews__grid">
+        <div class="review-card">
+          <span class="review-card__quote">&ldquo;</span>
+          <p class="review-card__text">[Текст отзыва первого выпускника о том, как программа помогла в карьерном росте и дала системные знания по цифровой трансформации]</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">И</div>
+            <div>
+              <div class="review-card__name">[Имя Фамилия]</div>
+              <div class="review-card__position">[Должность, компания]</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <span class="review-card__quote">&ldquo;</span>
+          <p class="review-card__text">[Текст отзыва второго выпускника о качестве преподавания, практической направленности программы и связи с индустрией]</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">А</div>
+            <div>
+              <div class="review-card__name">[Имя Фамилия]</div>
+              <div class="review-card__position">[Должность, компания]</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <span class="review-card__quote">&ldquo;</span>
+          <p class="review-card__text">[Текст отзыва третьего выпускника о нетворкинге, менторстве и возможностях, которые открылись после обучения]</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">М</div>
+            <div>
+              <div class="review-card__name">[Имя Фамилия]</div>
+              <div class="review-card__position">[Должность, компания]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="reviews__note">Отзывы первых выпускников появятся после запуска программы</p>
+    </div>
+  </section>
+
+  <!-- ===== КАРЬЕРНЫЕ ПЕРСПЕКТИВЫ ===== -->
+  <section class="section section--gray" id="career">
+    <div class="container">
+      <span class="section__label">Карьера</span>
+      <h2 class="section__title">Карьерные перспективы</h2>
+      <p class="section__subtitle">Роли, к которым готовит программа</p>
+
+      <div class="career__grid">
+        <div class="career-card">
+          <div class="career-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div>
+            <div class="career-card__title">Chief Digital Officer (CDO)</div>
+            <p class="career-card__text">Руководитель цифровой трансформации компании. Отвечает за стратегию цифровизации и внедрение инноваций.</p>
+          </div>
+        </div>
+
+        <div class="career-card">
+          <div class="career-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div>
+            <div class="career-card__title">Chief Information Officer (CIO)</div>
+            <p class="career-card__text">Директор по информационным технологиям. Управляет всей ИТ-инфраструктурой и технологической стратегией.</p>
+          </div>
+        </div>
+
+        <div class="career-card">
+          <div class="career-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <div>
+            <div class="career-card__title">Бизнес-архитектор</div>
+            <p class="career-card__text">Проектирует целевую бизнес-архитектуру предприятия, связывая бизнес-процессы с ИТ-решениями.</p>
+          </div>
+        </div>
+
+        <div class="career-card">
+          <div class="career-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div>
+            <div class="career-card__title">Архитектор решений</div>
+            <p class="career-card__text">Проектирует ИТ-архитектуру для конкретных бизнес-задач, выбирает технологии и обеспечивает их интеграцию.</p>
+          </div>
+        </div>
+
+        <div class="career-card">
+          <div class="career-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <div class="career-card__title">Руководитель цифровых проектов</div>
+            <p class="career-card__text">Управляет портфелем проектов цифровой трансформации, координирует кросс-функциональные команды.</p>
+          </div>
+        </div>
+
+        <div class="career-card">
+          <div class="career-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          </div>
+          <div>
+            <div class="career-card__title">Консультант по цифровой трансформации</div>
+            <p class="career-card__text">Помогает компаниям диагностировать текущее состояние, проектировать целевое и выстраивать путь трансформации.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== КАК ПОСТУПИТЬ ===== -->
+  <section class="section" id="admission">
+    <div class="container">
+      <span class="section__label">Поступление</span>
+      <h2 class="section__title">Как поступить</h2>
+      <p class="section__subtitle">3 шага до зачисления на программу</p>
+
+      <div class="stepper">
+        <div class="stepper__item">
+          <div class="stepper__marker">
+            <div class="stepper__dot">1</div>
+            <div class="stepper__line"></div>
+          </div>
+          <div class="stepper__content">
+            <h3 class="stepper__title">Подайте документы</h3>
+            <p class="stepper__text">Зарегистрируйтесь через Госуслуги и загрузите необходимые документы: диплом о высшем образовании, паспорт, СНИЛС. Приём документов открыт с июня по август 2026 года.</p>
+          </div>
+        </div>
+
+        <div class="stepper__item">
+          <div class="stepper__marker">
+            <div class="stepper__dot">2</div>
+            <div class="stepper__line"></div>
+          </div>
+          <div class="stepper__content">
+            <h3 class="stepper__title">Пройдите профессиональное испытание</h3>
+            <p class="stepper__text">Устный экзамен в формате защиты концепции цифрового продукта. Вам предложат описать идею, целевую аудиторию и подход к реализации. Подготовка не требует специальных технических знаний.</p>
+          </div>
+        </div>
+
+        <div class="stepper__item">
+          <div class="stepper__marker">
+            <div class="stepper__dot">3</div>
+            <div class="stepper__line"></div>
+          </div>
+          <div class="stepper__content">
+            <h3 class="stepper__title">Получите результат и заключите договор</h3>
+            <p class="stepper__text">Результаты вступительных испытаний публикуются в течение 5 рабочих дней. После зачисления вы заключаете договор и начинаете обучение в сентябре 2026 года.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section section--gray" id="faq">
+    <div class="container">
+      <span class="section__label">Частые вопросы</span>
+      <h2 class="section__title">FAQ</h2>
+
+      <div class="faq__list">
+        <div class="faq__item">
+          <div class="faq__question" role="button" aria-expanded="false" tabindex="0">
+            <span class="faq__question-text">Сколько стоит обучение?</span>
+            <span class="faq__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              Стоимость обучения составляет 695 000 рублей в год. Полная стоимость программы за 2 года &mdash; 1 390 000 рублей. Возможна оплата по семестрам. Также вы можете получить налоговый вычет за обучение &mdash; до 13% от стоимости.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__question" role="button" aria-expanded="false" tabindex="0">
+            <span class="faq__question-text">Можно ли совмещать с работой?</span>
+            <span class="faq__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              Да, программа рассчитана на работающих профессионалов. Формат &mdash; очное обучение с возможностью онлайн-участия. Расписание составлено с учётом того, что большинство студентов совмещают учёбу с основной работой.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__question" role="button" aria-expanded="false" tabindex="0">
+            <span class="faq__question-text">Какой формат: онлайн или офлайн?</span>
+            <span class="faq__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              Формат обучения &mdash; очный, с возможностью онлайн-подключения к лекциям. Часть занятий проходит в офлайн-формате (практикумы, защиты проектов, нетворкинг), часть &mdash; в онлайне. Это позволяет гибко планировать своё время.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__question" role="button" aria-expanded="false" tabindex="0">
+            <span class="faq__question-text">Есть ли бюджетные места?</span>
+            <span class="faq__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              Информация о наличии бюджетных мест уточняется. Свяжитесь с приёмной комиссией для получения актуальных данных о бюджетных местах и возможных скидках на обучение.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__question" role="button" aria-expanded="false" tabindex="0">
+            <span class="faq__question-text">Нужен ли опыт в ИТ для поступления?</span>
+            <span class="faq__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              Формального требования к опыту в ИТ нет &mdash; достаточно наличия диплома бакалавра или специалиста. Однако программа рассчитана на тех, кто понимает базовые принципы работы с технологиями и хочет выйти на управленческий уровень. Профессиональное испытание поможет оценить вашу готовность.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__question" role="button" aria-expanded="false" tabindex="0">
+            <span class="faq__question-text">Какой документ я получу по окончании?</span>
+            <span class="faq__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              Вы получите диплом магистра государственного образца по направлению 38.04.05 &laquo;Бизнес-информатика&raquo;, программа &laquo;Архитектура цифровой трансформации&raquo;. Это полноценный диплом о высшем образовании, признаваемый всеми работодателями.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__question" role="button" aria-expanded="false" tabindex="0">
+            <span class="faq__question-text">Есть ли отсрочка от армии?</span>
+            <span class="faq__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              Да, студенты очной формы обучения получают отсрочку от призыва на военную службу на весь период обучения в магистратуре (2 года) в соответствии с действующим законодательством РФ.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <div class="faq__question" role="button" aria-expanded="false" tabindex="0">
+            <span class="faq__question-text">Когда начинается приём документов?</span>
+            <span class="faq__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              Приём документов на первый набор программы открывается летом 2026 года. Подача документов &mdash; через портал Госуслуг. Начало обучения &mdash; сентябрь 2026 года. Оставьте заявку, чтобы получить уведомление о старте приёма.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ФИНАЛЬНЫЙ CTA ===== -->
+  <section class="final-cta" id="apply-form">
+    <div class="container">
+      <h2>Остались вопросы?</h2>
+      <p class="final-cta__subtitle">Оставьте заявку, и команда Контур Университета свяжется с вами в течение 1 рабочего дня</p>
+
+      <form class="final-cta__form" action="#" method="POST" aria-label="Форма заявки на консультацию">
+        <input type="text" class="final-cta__input" placeholder="Ваше имя" aria-label="Ваше имя" required>
+        <input type="email" class="final-cta__input" placeholder="Email" aria-label="Email" required>
+        <input type="tel" class="final-cta__input" placeholder="Телефон" aria-label="Телефон">
+        <button type="submit" class="btn btn--white final-cta__submit" aria-label="Отправить заявку на консультацию">Отправить заявку</button>
+      </form>
+
+      <p class="final-cta__note">Нажимая на кнопку, вы соглашаетесь с политикой обработки персональных данных</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__logo">
+            <span class="nav__logo-mark">КУ</span>
+            Контур Университет
+          </div>
+        </div>
+
+        <div class="footer__contact">
+          <a href="mailto:university@skbkontur.ru">university@skbkontur.ru</a><br>
+          Екатеринбург, Россия
+        </div>
+
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="VK">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.12-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.678.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.253-1.406 2.148-3.574 2.148-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="MAX">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-11l1.5 4.5L12 17l.5-3.5L14 9h-4z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 1988&ndash;2026 СКБ Контур</span>
+        <div class="footer__links">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Согласие на обработку данных</a>
+          <a href="#">Лицензия на образовательную деятельность</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JS ===== -->
+  <script>
+    (function() {
+      'use strict';
+
+      // Sticky nav shadow on scroll
+      var nav = document.getElementById('nav');
+      var scrollThreshold = 10;
+
+      function handleScroll() {
+        if (window.scrollY > scrollThreshold) {
+          nav.classList.add('nav--scrolled');
+        } else {
+          nav.classList.remove('nav--scrolled');
+        }
+      }
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          var target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            var navHeight = nav.offsetHeight;
+            var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Accordion: FAQ
+      document.querySelectorAll('.faq__question').forEach(function(question) {
+        question.addEventListener('click', function() {
+          var item = this.closest('.faq__item');
+          var answer = item.querySelector('.faq__answer');
+          var isActive = item.classList.contains('active');
+
+          // Close all
+          document.querySelectorAll('.faq__item.active').forEach(function(openItem) {
+            openItem.classList.remove('active');
+            openItem.querySelector('.faq__answer').style.maxHeight = null;
+            openItem.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+          });
+
+          // Open clicked if it was closed
+          if (!isActive) {
+            item.classList.add('active');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            this.setAttribute('aria-expanded', 'true');
+          }
+        });
+
+        // Keyboard support
+        question.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+          }
+        });
+      });
+
+      // Accordion: Program modules
+      document.querySelectorAll('.program__header').forEach(function(header) {
+        header.addEventListener('click', function() {
+          var module = this.closest('.program__module');
+          var body = module.querySelector('.program__body');
+          var isActive = module.classList.contains('active');
+
+          // Close all
+          document.querySelectorAll('.program__module.active').forEach(function(openModule) {
+            openModule.classList.remove('active');
+            openModule.querySelector('.program__body').style.maxHeight = null;
+            openModule.querySelector('.program__header').setAttribute('aria-expanded', 'false');
+          });
+
+          // Open clicked if it was closed
+          if (!isActive) {
+            module.classList.add('active');
+            body.style.maxHeight = body.scrollHeight + 'px';
+            this.setAttribute('aria-expanded', 'true');
+          }
+        });
+
+        // Keyboard support
+        header.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+          }
+        });
+      });
+
+      // Form submission prevention (demo)
+      var form = document.querySelector('.final-cta__form');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var btn = form.querySelector('button[type="submit"]');
+          var originalText = btn.textContent;
+          btn.textContent = 'Заявка отправлена!';
+          btn.disabled = true;
+          btn.style.opacity = '0.7';
+          setTimeout(function() {
+            btn.textContent = originalText;
+            btn.disabled = false;
+            btn.style.opacity = '1';
+            form.reset();
+          }, 3000);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
